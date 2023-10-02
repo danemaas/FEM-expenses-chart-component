@@ -1,0 +1,181 @@
+/*====== GOOGLE FONTS ======*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+/*====== VARIABLES ======*/
+:root {
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --verypale-orange: hsl(33, 100%, 98%);
+}
+
+/*====== BASE ======*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 62.5%;
+    background-color: var(--cream);
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*====== MAIN CLASSES ======*/
+.container {
+    width: 375px;
+    margin: 10rem auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.balance-box {
+    background-color: var(--soft-red);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .7rem;
+}
+
+.balance-box .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.balance-box .wrapper .title {
+    font-size: .95rem;
+    font-weight: 400;
+    color: var(--verypale-orange);
+}
+
+.balance-box .wrapper .my-balance {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verypale-orange);
+}
+
+.spending-box {
+    background-color: var(--verypale-orange);
+    padding: 1.5rem;
+    border-radius: .7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.chart-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chart-box .title {font-size: 1.5rem;}
+
+.chart-box .chart {
+    height: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.chart-box .chart > * {
+    flex: 1;
+}
+
+.chart .column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .5rem;
+}
+
+.chart .bar {
+    background-color: var(--soft-red);
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.chart #amount {
+    text-align: center;
+    font-size: .5rem;
+    background-color: black;
+    color: var(--verypale-orange);
+    padding: .3rem .4rem;
+    border-radius: .2rem;
+    display: none;
+    transition: .3s;
+}
+
+.column:hover #amount {
+    display: block;
+}
+
+.chart .bar:hover {
+    opacity: .6;
+}
+
+.bar.max {
+    background-color: var(--cyan);
+}
+
+.chart .day {
+    text-align: center;
+    color: var(--medium-brown);
+    font-size: .75rem;
+}
+
+.borderline {
+    height: 3px;
+    background-color: hsl(27, 66%, 92%);
+    border: none;
+}
+
+.total-spending-box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.total-spending-box .description {
+    font-size: .9rem;
+    color: var(--medium-brown);
+}
+
+.monthly-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.monthly-total .amount {font-size: 1.8rem;}
+
+.comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.comparison .percentage {
+    font-size: 1rem;
+}
+
+/*======  ======*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
